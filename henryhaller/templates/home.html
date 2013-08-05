@@ -1,0 +1,67 @@
+{% autoescape off %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" type="image/png" href="./static/favicon.ico"/>
+		<link href="./static/bootstrap.css" rel="stylesheet" type="text/css"/>
+		<link href="./static/base.css" rel="stylesheet" type="text/css"/>
+		<title>Henry Haller Homepage</title>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+		<script type="text/javascript" src="./static/base.js"></script>
+	</head>
+	<body>
+		<div class="visible-sm  main">
+			<h1 class="small_title">Henry Haller's Webspace</h1>
+		<div class="small">
+			<a href="#" onclick="displaySelect_s('self_description_small'); return false;">
+				<span class="small_subtitle">About Me</span>
+			</a>
+			<a href="#" onclick="displaySelect_s('blog_small'); return false;">
+				<span class="small_subtitle">Blog</span>
+			</a>
+			<a href="#" onclick="displaySelect_s('bluserve_small'); return false;">
+				<span class="small_subtitle">Bluserve</span>
+			</a>
+			<!--
+			<a href="#" onclick="displaySelect_s('portfolio_small'); return false;">
+				<span class="small_subtitle">Portfolio</span>
+			</a>
+			-->
+			<div id="self_description_small" style="display:{{self_description_display}}">{{self_description}}</div>
+			<div id="blog_small" style="display:{{blog_display}}">{{blog}}</div>
+			<div id="bluserve_small" style="display:{{bluserve_display}}">{{bluserve}}</div>
+			<!--<div id="portfolio_small" style="display:{{portfolio_display}}">{{portfolio}}</div>-->
+		</div>
+		</div>
+
+		<div class="visible-lg">
+		<div class="left_float" id="left_float">&nbsp;</div>
+		<div class="right_float" id="right_float">&nbsp;</div>
+			<h1 class="large_title">Henry Haller's Webspace</h1>
+		<div class="main" id="main">
+		<div class="large">
+			<a href="#" onclick="displaySelect_l('self_description_large'); return false;">
+				<span class="large_subtitle">About Me</span>
+			</a>
+			<a href="#" onclick="displaySelect_l('blog_large'); return false;">
+				<span class="large_subtitle">Blog</span>
+			</a>
+			<a href="#" onclick="displaySelect_l('bluserve_large'); return false;">
+				<span class="large_subtitle">Bluserve</span>
+			</a>
+			<!--
+			<a href="#" onclick="displaySelect_l('portfolio_large'); return false;">
+				<span class="large_subtitle">Portfolio</span>
+			</a>
+			-->
+			<div id="self_description_large" style="display:{{self_description_display}}">{{self_description}}</div>
+			<div id="blog_large" style="display:{{blog_display}}">{{blog}}</div>
+			<div id="bluserve_large" style="display:{{bluserve_display}}">{{bluserve}}</div>
+			<!--<div id="portfolio_large" style="display:{{portfolio_display}}">{{portfolio}}</div>-->
+		</div>
+		</div>
+		</div>
+	<!--Dubug area. user-agent:{{request.META.HTTP_USER_AGENT}} -->
+	</body>
+</html>
+{% endautoescape %}

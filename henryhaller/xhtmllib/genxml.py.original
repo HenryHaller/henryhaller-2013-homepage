@@ -1,0 +1,21 @@
+from xml.dom import getDOMImplementation as dom
+dom = dom()
+def gen_doc():
+	doctype = dom.createDocumentType("html", None, None)
+	doc = dom.createDocument(None, "html", doctype)
+	head = doc.createElement("head")
+	body = doc.createElement("body")
+	doc.documentElement.appendChild(head)
+	doc.documentElement.appendChild(body)
+	return doc
+
+
+def gen_elem(doc, name, text):
+	elem = doc.createElement(name)
+	elem.appendChild(doc.createTextNode(text))
+	return elem
+
+def set_title(doc, title):
+	title_elem = gen_elem(doc, "title", title)
+	doc.getElementsByTagName("head")[0].appendChild(title_elem)
+	return doc

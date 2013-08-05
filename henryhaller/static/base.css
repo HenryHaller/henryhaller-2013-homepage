@@ -1,0 +1,97 @@
+body {
+	background-color:#F2EDDE;
+	}
+
+h1 {
+	font-weight:bold;
+	font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+	text-align: center;
+	padding-bottom:0px;
+	border-bottom-style:solid;
+	margin-bottom:0px;
+	}
+
+h1.large_title {
+	margin-top:0px;
+	font-size:360%;
+}
+
+h1.small_title {
+	margin-top:0px;
+	font-size:150%;
+	margin-bottom:14px;
+	}
+
+span {
+	text-align:center;
+	font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+	font-weight:bold;
+	margin-bottom:2.5px;
+	margin-right:auto;
+	margin-left:auto;	
+	}
+
+span.small_subtitle {
+	margin-right:3px;
+	margin-left:3px;
+	font-size:110%;
+	border-bottom-style:groove;
+	}
+span.large_subtitle {
+	margin-right:3px;
+	margin-left:3px;
+	font-size:180%;
+	border-bottom-style:groove;
+	}
+
+
+.small {
+	margin-right: auto;
+	margin-left: auto;
+	width:95%;
+	margin-top:-15px;
+	}
+.large {
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	width:55%;
+	}
+
+.main {
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	}
+
+p{
+	font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+	text-align:justify;
+	text-indent:50px;
+}
+
+.left_float {
+	width:21.5%;
+	background-image:url('http://henryhaller.com/static/sidebar.jpg');
+	position:fixed;
+	left:0px;	
+	height:2000px;	
+	}
+.right_float {
+	width:21.5%;
+	background-image:url('http://henryhaller.com/static/sidebar.jpg');
+	position:fixed;
+	right:0px;
+	height:2000px;	
+	}
+a:link { text-decoration:none; }
+
+
+h4 {
+	font-family: Perpetua, Baskerville, "Big Caslon", "Palatino Linotype", Palatino, "URW Palladio L", "Nimbus Roman No9 L", serif;
+	text-indent:50px;
+	font-weight:bold;
+	margin-bottom:5px;
+	text-align:center;
+}
+
