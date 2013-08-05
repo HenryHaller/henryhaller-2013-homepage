@@ -14,6 +14,7 @@ def generate_blog():
 
 
 def home(request):
+    #read in some important datas
     self_description = open(SELF_DESCRIPTION_HTML, 'r').read()
     bluserve = open(BLUSERVE_HTML, 'r').read()
     portfolio = open(PORTFOLIO_HTML, 'r').read()
@@ -30,6 +31,11 @@ def home(request):
     elif request.path in ["/bluserve", "/bluserve/"]: cd["bluserve_display"] = "block;"
     elif request.path in ["/portfolio", "/portfolio/"]: cd["bluserve_display"] = "block;"
     else: cd["self_description_display"] = "block;"
+
+    ua_list = request.META["HTTP_USER_AGENT"]
+    cd["size_large"] = cd["size_small"] = False
+    if "iPhone" in ua_list or "Phone" in ua_list: cd["size_small"] = True
+    else: cd["size_large"] = True
 
     template = loader.get_template(HOME_TEMPLATE)
     context = RequestContext(request, cd)

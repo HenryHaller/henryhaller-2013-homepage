@@ -8,6 +8,8 @@
 		<title>Henry Haller Homepage</title>
 		<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 		<script type="text/javascript" src="./static/base.js"></script>
+		{% if size_large %}<link href="./static/large.css" rel="stylesheet" type="text/css"/> {% endif %}
+		{% if size_small %}<link href="./static/small.css" rel="stylesheet" type="text/css"/> {% endif %}
 	</head>
 	<body>
 		<div class="visible-sm  main">
@@ -61,7 +63,7 @@
 		</div>
 		</div>
 		</div>
-	<!--Dubug area. user-agent:{{request.META.HTTP_USER_AGENT}} -->
+	<!--Dubug area. user-agent:{{request.META.HTTP_USER_AGENT}} {{size}} -->
 	</body>
 </html>
 {% endautoescape %}
