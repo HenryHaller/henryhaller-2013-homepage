@@ -34,7 +34,7 @@ def home(request):
 
     ua_list = request.META["HTTP_USER_AGENT"]
     cd["size_large"] = cd["size_small"] = False
-    if "iPhone" in ua_list or "Phone" in ua_list: cd["size_small"] = True
+    if "iPhone" in ua_list or "Phone" in ua_list or "Mobile" in ua_list: cd["size_small"] = True
     else: cd["size_large"] = True
 
     template = loader.get_template(HOME_TEMPLATE)
