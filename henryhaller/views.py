@@ -14,7 +14,7 @@ def generate_blog():
     posts = henryhaller.models.BlogPost.objects.order_by("-pk")[:5]
     blog_html = ""
     for post in posts:
-        post_html = '<h4 style="post_title"><span class="post_title_span">%s</span> ----- <span class="post_date">%s</span></h4><div style="blog_post">%s</div>' % (post.title, post.pretty_age(), post.text)
+        post_html = '<h4 style="post_title"><span class="post_title_span">%s</span> &nbsp; <span class="post_date">%s</span></h4><div style="blog_post">%s</div>' % (post.title, post.pretty_age(), post.text)
         blog_html += post_html
     return blog_html
 
