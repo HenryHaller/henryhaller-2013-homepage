@@ -1,6 +1,7 @@
 from django.template import Context, RequestContext, loader
 from django.http import HttpResponse
 
+import henryhaller.models
 
 HOME_TEMPLATE="home.html"
 
@@ -10,7 +11,12 @@ BLUSERVE_HTML = TEXT_DIR + "bluserve.html"
 PORTFOLIO_HTML = TEXT_DIR + "portfolio.html"
 
 def generate_blog():
-    return "<p>Blog coming soon.</p>"
+    posts = henryhaller.models.BlogPost.objects.order_by("-pk")[:5]
+    blog_html = ""
+    for post in posts:
+        post_html = "<h4>%s -- %s</h4><div>%s</div>" % (post.title, post.pub_date, post.text)
+        blog_html += post_html
+    return blog_html
 
 
 def home(request):

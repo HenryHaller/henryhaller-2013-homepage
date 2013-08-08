@@ -1,5 +1,6 @@
 body {
 	background-color:#F2EDDE;
+	text-align:center;
 	}
 
 h1 {
@@ -52,7 +53,6 @@ a:link { text-decoration:none; }
 
 h4 {
 	font-family: Perpetua, Baskerville, "Big Caslon", "Palatino Linotype", Palatino, "URW Palladio L", "Nimbus Roman No9 L", serif;
-	text-indent:50px;
 	font-weight:bold;
 	margin-bottom:5px;
 	text-align:center;

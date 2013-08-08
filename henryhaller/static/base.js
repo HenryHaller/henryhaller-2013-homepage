@@ -14,3 +14,10 @@ function displaySelect_l(id) {
 		//document.getElementById("portfolio_large").style.display = 'none';
 		document.getElementById(id).style.display = 'block';
 	}
+function displaySelect(id) {
+		document.getElementById("self_description").style.display = 'none';
+		document.getElementById("blog").style.display = 'none';
+		document.getElementById("bluserve").style.display = 'none';
+		//document.getElementById("portfolio_large").style.display = 'none';
+		document.getElementById(id).style.display = 'block';
+	}

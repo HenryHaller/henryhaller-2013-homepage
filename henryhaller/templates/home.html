@@ -14,30 +14,33 @@
 	<body>
 			<h1 class="title">Henry Haller's Webspace</h1>
 		<div class="main" id="main">
-			<a href="#" onclick="displaySelect_l('self_description_large'); return false;">
+			<a href="#" onclick="displaySelect('self_description'); return false;">
 				<span class="subtitle">About Me</span>
 			</a>
-			<a href="#" onclick="displaySelect_l('blog_large'); return false;">
+			<a href="#" onclick="displaySelect('blog'); return false;">
 				<span class="subtitle">Blog</span>
 			</a>
-			<a href="#" onclick="displaySelect_l('bluserve_large'); return false;">
+			<a href="#" onclick="displaySelect('bluserve'); return false;">
 				<span class="subtitle">Bluserve</span>
 			</a>
+
 			<!--
-			<a href="#" onclick="displaySelect_l('portfolio_large'); return false;">
+			<a href="#" onclick="displaySelect_l('portfolio'); return false;">
 				<span class="subtitle">Portfolio</span>
 			</a>
 			-->
+
 			<div id="self_description" style="display:{{self_description_display}}">{{self_description}}</div>
 			<div id="blog" style="display:{{blog_display}}">{{blog}}</div>
 			<div id="bluserve" style="display:{{bluserve_display}}">{{bluserve}}</div>
+
 			<!--<div id="portfolio" style="display:{{portfolio_display}}">{{portfolio}}</div>-->
 		</div>
 		<div class="visible-lg"> <!--sidebars for large monitors-->
 			<div class="sidebar" id="left_float">&nbsp;</div>
 			<div class="sidebar" id="right_float">&nbsp;</div>
 		</div>
-	<!--Dubug area. user-agent:{{request.META.HTTP_USER_AGENT}} {{size}} -->
+	<!--Dubug area. user-agent:{{request.META.HTTP_USER_AGENT}} size_large: {{size_large}}, size_small: {{size_small}}-->
 	</body>
 </html>
 {% endautoescape %}
