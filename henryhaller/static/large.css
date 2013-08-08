@@ -1,0 +1,23 @@
+h1.title {
+	margin-top:0px;
+	font-size:360%;
+}
+
+
+
+span.subtitle {
+	margin-right:3px;
+	margin-left:3px;
+	font-size:180%;
+	border-bottom-style:groove;
+	}
+
+
+
+.main {
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	width:55%;
+	}
+

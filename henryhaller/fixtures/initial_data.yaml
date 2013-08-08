@@ -1,0 +1,19 @@
+- model: sites.site
+  pk: 1
+  fields:
+    name: Henry Haller's Website
+    domain: henryhaller.com
+
+- model: auth.User
+  pk: 1
+  fields:
+    first_name: henry
+    last_name: haller
+    username: henryhaller
+    is_active: true
+    is_superuser: true
+    is_staff: true
+    email: henrybhaller@gmail.com
+    password: pbkdf2_sha256$10000$ZXDQKSFkOUIt$9RJcWTXT2XO2Dsy25xXtVgtiYdI6cTyaQp6o2taECJ8=
+
+
