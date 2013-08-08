@@ -58,3 +58,5 @@ h4 {
 	text-align:center;
 }
 
+span.post_date {float:right;}
+span.post_title_span {float:left;}
