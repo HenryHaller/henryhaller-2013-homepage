@@ -7,6 +7,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^permalink/(?P<short_form_url>\S+)/?$', 'henryhaller.views.permalink', name='permalink'),
     url(r'^.*', 'henryhaller.views.home', name='home'),
     # url(r'^django_dir/', include('django_dir.foo.urls')),
 

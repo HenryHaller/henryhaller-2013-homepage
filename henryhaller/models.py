@@ -7,6 +7,7 @@ class BlogPost(models.Model):
 	pub_date = models.DateTimeField('date published')
 	title = models.CharField(max_length=500)
 	text = models.TextField()
+	url_title = models.CharField(max_length=350)
 	def __unicode__(self): return self.title
 	def pretty_age(self):
 		age_diff = django.utils.timezone.now() - self.pub_date

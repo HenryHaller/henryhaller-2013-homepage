@@ -3,6 +3,7 @@ from django.conf import global_settings
 
 TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
     "django.core.context_processors.request",
+    "henryhaller.processors.get_size_from_ua_string",
 )
 
 DEBUG = True
