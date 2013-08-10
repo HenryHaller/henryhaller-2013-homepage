@@ -11,6 +11,9 @@ SELF_DESCRIPTION_HTML = TEXT_DIR + "self_description.html"
 BLUSERVE_HTML = TEXT_DIR + "bluserve.html"
 PORTFOLIO_HTML = TEXT_DIR + "portfolio.html"
 
+def under_construction(request):
+    return HttpResponse("Site Under Construction. Check Back soon")
+
 def generate_blog():
     posts = henryhaller.models.BlogPost.objects.order_by("-pk")[:5]
     blog_html = ""
