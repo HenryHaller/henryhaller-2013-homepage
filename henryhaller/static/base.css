@@ -32,7 +32,7 @@ p{
 
 /*these provide the left and right bars */
 
-.sidebar {background-color:#0B61A4; }
+.sidebar {background-color:#020213; }
 
 #left_float {
 	width:21.5%;
@@ -60,3 +60,5 @@ h4 {
 
 span.post_date {float:right;}
 span.post_title_span {float:left;}
+span.permalink {float:right; margin-top:20px;}
+span.post_content {float: left;}

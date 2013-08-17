@@ -1,0 +1,31 @@
+{% autoescape off %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" type="image/png" href="./static/favicon.ico"/>
+		<link href="/static/bootstrap.css" rel="stylesheet" type="text/css"/>
+		<link href="/static/base.css" rel="stylesheet" type="text/css"/>
+		<title>Henry Haller's Webspace</title>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+		<script type="text/javascript" src="/static/base.js"></script>
+		{% if size_large %}<link href="/static/large.css" rel="stylesheet" type="text/css"/> {% endif %}
+		{% if size_small %}<link href="/static/small.css" rel="stylesheet" type="text/css"/> {% endif %}
+	</head>
+	<body>
+			<h1 class="title">{{post.title}}</h1>
+		<div class="main" id="main">
+			<div id="permalink">
+				<h4 style="post_title"><span class="post_title_span">{{post.title}}</span> &nbsp; <span class="post_date">{{post.pretty_age}}</span></h4>
+				<div style="blog_post">{{post.text}}</div>
+			</div>
+
+
+		</div>
+		<div class="visible-lg"> <!--sidebars for large monitors-->
+			<div class="sidebar" id="left_float">&nbsp;</div>
+			<div class="sidebar" id="right_float">&nbsp;</div>
+		</div>
+	<!--Dubug area. user-agent:{{request.META.HTTP_USER_AGENT}} size_large: {{size_large}}, size_small: {{size_small}}-->
+	</body>
+</html>
+{% endautoescape %}
