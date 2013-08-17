@@ -12,8 +12,8 @@ class BlogPost(models.Model):
 	def pretty_age(self):
 		age_diff = django.utils.timezone.now() - self.pub_date
 		days, seconds = age_diff.days, age_diff.seconds
-		if days == 0 and seconds < 60: return "less than 1 minute old"
-		if days == 0 and seconds < 3600: return "less than1 hour old"
-		if days == 0 and seconds < (24 * 60 * 60): return "less than 1 day old"
+		if days < 0 and seconds < 60: return "less than 1 minute old"
+		if days < 0 and seconds < 3600: return "less than1 hour old"
+		if days < 0 and seconds < (24 * 60 * 60): return "less than 1 day old"
 		if days == 1: return "1 day old"
 		return str(days) + " days old"
